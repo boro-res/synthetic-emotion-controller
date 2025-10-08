@@ -1,0 +1,73 @@
+seed: 42
+num_actors: 18
+dt: 0.3
+speed: 0.7
+
+init_layout: random
+init_box: 10.0
+
+num_category_dims: 4
+R_att: 12.0
+R_rep: 1.5
+L_att: 10.0
+L_rep: 1.5
+num_headings: 37
+heading_phase: 0.03
+
+need_targets: [0.75, 0.55]
+drive_sensitivity: [2.0, 1.6]
+valence_lambda: [1.0, 0.3]
+base_arousal: 0.45
+
+alpha_need: 0.7
+alpha_mem: 0.2
+alpha_aff: 0.1
+affect_fusion_beta0: 0.7
+
+
+K: 3
+memory_max: 1000
+
+absolute_actions: true
+heading_jitter_std: 0.008
+speed_noise_std: 0.01
+pos_noise_std: 0.0
+
+# smoothness knobs
+persist_weight: 0.7
+persist_kappa: 8.0
+turn_cost_weight: 0.06
+
+# tighter temps (more decisive)
+tau_policy_low: 0.25
+tau_policy_high: 0.7
+tau_action_low: 0.25
+tau_action_high: 0.7
+
+# a bit sharper lobes
+kappa: 8.5
+kappa_o: 6.0
+
+# smoother heading blending
+heading_smooth_gain: 0.25
+
+# confidence gating
+entropy_threshold: 0.35
+peak_threshold: 0.08
+
+
+# explore field width
+explore_sigma: 2.0
+
+
+# discourage perma-pause
+rest_arousal_gate: 0.8
+rest_drive_gate:   0.5
+pause_bias:       -0.05
+
+# ensure explore can beat pause when field flat
+explore_floor:     0.15
+
+# keep visible motion
+speed_conf_gain:   0.2
+
