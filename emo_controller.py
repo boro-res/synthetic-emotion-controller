@@ -51,6 +51,12 @@ This code respects the boundedness & hygiene choices from the SI:
 - All internal maps are bounded and normalized.
 - Softmaxes are stabilized (subtract max).
 - Retrieval is Top-K with cosine similarity on L2-normalized keys.
+
+
+To Run This Code (outputs trajectories.png and metrics.png in directory results)
+
+python emo_controller.py --config config_social.yaml --steps 600 --out_dir results
+
 """
 
 from __future__ import annotations
